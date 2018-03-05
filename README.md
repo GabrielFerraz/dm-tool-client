@@ -1,5 +1,4 @@
-# dm-tool-client
-Client for the DM Tool made with AngularJS
+# DmTool
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.2.
 
