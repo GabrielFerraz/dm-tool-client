@@ -10,7 +10,7 @@ export class WeaponService {
   constructor(private http: HttpClient) { }
 
   createWeapon(weaponData) {
-  	return this.http.post('http://localhost:3000/weapons/',weaponData);
+  	return this.http.post('http://localhost:3000/weapons/',weaponData)
   	.pipe(catchError(this.handleError))
   }
 

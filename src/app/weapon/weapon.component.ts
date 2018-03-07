@@ -41,4 +41,9 @@ export class WeaponComponent implements OnInit {
   		.subscribe(res => console.log(res));
   }
 
+  saveWeapon() {
+  	this.weaponService.createWeapon(this.weapon)
+  		.subscribe(res => console.log(res));
+  }
+
 }
