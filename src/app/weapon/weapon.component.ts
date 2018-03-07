@@ -1,23 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 import { Weapon } from './weapon';
+import { WeaponService } from './weapon.service';
+
 
 @Component({
   selector: 'app-weapon',
   templateUrl: './weapon.component.html',
-  styleUrls: ['./weapon.component.scss']
+  styleUrls: ['./weapon.component.scss'],
+  providers: [WeaponService]
 })
 export class WeaponComponent implements OnInit {
 
 	weapon: Weapon = {
-		name: 'teste',
-    price: 10,
-    damageType: 'Piercing',
-    type: 'Simple',
-    range: '0',
-    hands: '1',
-    damage: '1d6',
-    critRange: '18-20',
-    critModifier: 2
+		name: '',
+    price: 0,
+    damageType: '',
+    type: '',
+    range: '',
+    hands: '',
+    damage: '',
+    critRange: '',
+    critModifier: 0
 	};
 
 	damageTypes = [
@@ -31,9 +34,11 @@ export class WeaponComponent implements OnInit {
 		"Martial"
 	];
 
-  constructor() { }
+  constructor(private weaponService: WeaponService) { }
 
   ngOnInit() {
+  	this.weaponService.getWeapons()
+  		.subscribe(res => console.log(res));
   }
 
 }

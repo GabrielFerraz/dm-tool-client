@@ -1,5 +1,5 @@
 export class Weapon{
-	name: String;
+		name: String;
     price: Number;
     damageType: String;
     type: String;

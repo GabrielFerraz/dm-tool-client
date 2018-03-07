@@ -15,6 +15,7 @@
 			  <div class="form-group">
 			  	<label>Damage Type</label>	
 				  <select class="form-control" [(ngModel)]="weapon.damageType">
+					  <option value='' >Select Damage Type</option>
 					  <option *ngFor='let type of damageTypes' [value]='type' >{{type}}</option>
 					</select>
 			  </div>
@@ -22,6 +23,7 @@
 			  <div class="form-group">
 			  	<label>Type</label>	
 				  <select class="form-control" [(ngModel)]="weapon.type">
+					  <option value='' >Select weapon type</option>
 					  <option *ngFor='let type of weaponTypes' [value]='type' >{{type}}</option>
 					</select>
 			  </div>
