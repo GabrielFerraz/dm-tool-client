@@ -18,6 +18,10 @@ export class WeaponService {
   	return this.http.get('http://localhost:3000/weapons');
   }
 
+  getWeapon(weaponId) {
+  	return this.http.get('http://localhost:3000/weapons/' + weaponId);
+  }
+
   private handleError (error: any) {
     error = error.json();
     let errMsg = (error.message) ? error.message : error.code ? `${error.code}` : "Server error";

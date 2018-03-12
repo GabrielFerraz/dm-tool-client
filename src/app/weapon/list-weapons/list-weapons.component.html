@@ -1,0 +1,4 @@
+<ul class="list-group">
+	<li class="list-group-item" *ngIf="weapons.length == 0">There are no weapons</li>
+	<li class="list-group-item" *ngFor="let weapon of weapons">{{weapon.name}}</li>
+</ul>
