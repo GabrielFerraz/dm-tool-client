@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+    	<!-- <form> -->
+			  <div class="form-group">
+			    <label >Name</label>
+			    <input class="form-control" [(ngModel)]="weapon.name" placeholder="enter Weapon name">
+			  </div>
+
+			  <div class="form-group">
+			    <label >Price</label>
+			    <input class="form-control" type="Number" [(ngModel)]="weapon.price" placeholder="enter Weapon price">
+			  </div>
+
+			  <div class="form-group">
+			  	<label>Damage Type</label>	
+				  <select class="form-control" [(ngModel)]="weapon.damageType">
+					  <option value='' >Select Damage Type</option>
+					  <option *ngFor='let type of damageTypes' [value]='type' >{{type}}</option>
+					</select>
+			  </div>
+
+			  <div class="form-group">
+			  	<label>Type</label>	
+				  <select class="form-control" [(ngModel)]="weapon.type">
+					  <option value='' >Select weapon type</option>
+					  <option *ngFor='let type of weaponTypes' [value]='type' >{{type}}</option>
+					</select>
+			  </div>
+
+
+		    <label >Range</label>
+			  <div class="input-group mb-3">
+			    <input class="form-control" [(ngModel)]="weapon.range" placeholder="enter Weapon range">
+			    <div class="input-group-append">
+	          <div class="input-group-text">ft</div>
+	        </div>
+			  </div>
+
+			  <div class="form-group">
+			    <label >Hands</label>
+			    <input class="form-control" type="text" [(ngModel)]="weapon.hands" placeholder="number of hands">
+			  </div>
+
+			  <div class="form-group">
+			    <label >Damage</label>
+			    <input class="form-control" [(ngModel)]="weapon.damage" placeholder="enter Weapon damage">
+			  </div>
+
+			  <div class="form-group">
+			    <label >Crit Range</label>
+			    <input class="form-control" [(ngModel)]="weapon.critRange" placeholder="enter Weapon crit range">
+			  </div>
+
+			  <div class="form-group">
+			    <label >Damage</label>
+			    <input class="form-control" [(ngModel)]="weapon.critModifier" placeholder="enter Weapon crit modifier">
+			  </div>
+
+			  <button type="submit" class="btn btn-primary" (click)='saveWeapon()'>Submit</button>
+			<!-- </form> -->
+  	</div>
+	</div>
+</div>
